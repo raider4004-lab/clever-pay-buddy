@@ -38,8 +38,14 @@ const SignupForm = ({ onSignup, onSwitchToLogin, loading, error }: SignupFormPro
     <Card className="w-full max-w-md mx-auto">
       <CardHeader className="text-center">
         <div className="flex justify-center mb-4">
-          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-            <div className="w-8 h-8 bg-accent rounded-full transform rotate-12"></div>
+          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center p-2">
+            <svg viewBox="0 0 400 200" className="w-full h-full">
+              <path d="M120 140 Q80 120 60 100 Q50 80 70 60 Q90 50 120 60 Q150 70 180 80 Q200 90 220 100 Q240 110 250 120 Q260 130 250 140 Q240 150 220 150 Q200 150 180 145 Q150 140 120 140 Z" fill="white"/>
+              <path d="M250 120 Q280 100 300 80 Q320 60 340 70 Q350 80 340 100 Q330 120 320 130 Q310 135 300 130 Q290 125 280 120 Q270 118 250 120 Z" fill="white"/>
+              <circle cx="340" cy="85" r="25" fill="white"/>
+              <path d="M355 85 L375 82 L370 88 Z" fill="#E50000"/>
+              <circle cx="345" cy="80" r="4" fill="black"/>
+            </svg>
           </div>
         </div>
         <CardTitle className="text-2xl font-bold">Join FinBot-AI</CardTitle>

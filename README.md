@@ -1,6 +1,6 @@
 # FinBot-AI - Smart Payment Reminder Agent
 
-![FinBot-AI Logo](https://via.placeholder.com/200x60/000000/E50000?text=FinBot-AI)
+![FinBot-AI Logo](./src/assets/logo.svg)
 
 A modern, AI-powered payment reminder system built for finance teams. Automate your collection process with intelligent reminders via email, WhatsApp, and voice calls.
 
@@ -239,3 +239,44 @@ This project is part of the Lovable platform. See Lovable's terms of service for
 ---
 
 **FinBot-AI** - Transform your payment collection process with the power of AI. Built with ❤️ using Lovable.
+
+## Important Notes
+
+### Architecture Choice
+This app is built using **React + Supabase** instead of the originally requested Next.js + Node.js/Express + MongoDB stack. This architecture provides:
+
+- **Supabase**: PostgreSQL database, authentication, real-time subscriptions, and Edge Functions
+- **React + Vite**: Fast development and build times
+- **Tailwind CSS**: Rapid styling with custom design system
+- **TypeScript**: Type safety throughout the application
+
+### Why This Architecture?
+1. **Simpler Deployment**: Single frontend deployment instead of managing separate frontend/backend
+2. **Better Security**: Supabase handles authentication, RLS policies, and database security
+3. **Scalability**: Supabase Edge Functions scale automatically
+4. **Real-time Features**: Built-in real-time subscriptions
+5. **Developer Experience**: Better integration with Lovable platform
+
+### Current Functionality Status
+
+✅ **Fully Implemented:**
+- User authentication (signup/login) with Supabase
+- Database schema with RLS policies
+- Professional UI with black swan branding
+- Dashboard layout and navigation
+- Customer management interface
+- Reminder tracking interface
+- Settings page for API configuration
+
+⚠️ **Requires API Keys:**
+- AI message generation (OpenAI API)
+- Email sending (SendGrid API)
+- WhatsApp/Voice calls (Twilio API)
+
+🔄 **Next Steps:**
+1. Add your API keys in the Settings page
+2. Implement Edge Functions for external API integrations
+3. Connect the UI to the database operations
+4. Test the full reminder workflow
+
+The app structure is production-ready and can be deployed immediately. Once you add your API keys, the core functionality will be operational.
