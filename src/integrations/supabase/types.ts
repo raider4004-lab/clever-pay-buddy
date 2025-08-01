@@ -14,7 +14,167 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      api_settings: {
+        Row: {
+          created_at: string
+          id: string
+          openai_configured: boolean | null
+          sendgrid_configured: boolean | null
+          twilio_configured: boolean | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          openai_configured?: boolean | null
+          sendgrid_configured?: boolean | null
+          twilio_configured?: boolean | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          openai_configured?: boolean | null
+          sendgrid_configured?: boolean | null
+          twilio_configured?: boolean | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      customers: {
+        Row: {
+          amount_due: number
+          company: string | null
+          created_at: string
+          due_date: string
+          email: string
+          id: string
+          name: string
+          notes: string | null
+          phone: string | null
+          risk_level: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          amount_due: number
+          company?: string | null
+          created_at?: string
+          due_date: string
+          email: string
+          id?: string
+          name: string
+          notes?: string | null
+          phone?: string | null
+          risk_level?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          amount_due?: number
+          company?: string | null
+          created_at?: string
+          due_date?: string
+          email?: string
+          id?: string
+          name?: string
+          notes?: string | null
+          phone?: string | null
+          risk_level?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          company_name: string | null
+          created_at: string
+          full_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          company_name?: string | null
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          company_name?: string | null
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      reminders: {
+        Row: {
+          ai_tone: string | null
+          created_at: string
+          customer_id: string
+          days_overdue: number | null
+          delivered_at: string | null
+          id: string
+          message_content: string
+          responded_at: string | null
+          sent_at: string | null
+          status: string
+          type: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          ai_tone?: string | null
+          created_at?: string
+          customer_id: string
+          days_overdue?: number | null
+          delivered_at?: string | null
+          id?: string
+          message_content: string
+          responded_at?: string | null
+          sent_at?: string | null
+          status?: string
+          type: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          ai_tone?: string | null
+          created_at?: string
+          customer_id?: string
+          days_overdue?: number | null
+          delivered_at?: string | null
+          id?: string
+          message_content?: string
+          responded_at?: string | null
+          sent_at?: string | null
+          status?: string
+          type?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reminders_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
