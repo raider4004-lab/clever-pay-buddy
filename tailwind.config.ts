@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				finbot: {
+					red: 'hsl(var(--finbot-red))',
+					black: 'hsl(var(--finbot-black))',
+					white: 'hsl(var(--finbot-white))',
+					'gray-light': 'hsl(var(--finbot-gray-light))',
+					'gray-medium': 'hsl(var(--finbot-gray-medium))',
+					'gray-dark': 'hsl(var(--finbot-gray-dark))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
